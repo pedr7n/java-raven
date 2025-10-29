@@ -11,8 +11,8 @@
 	<groupId>com.pedro</groupId>
 	<artifactId>java-raven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>javaWithMichelli</name>
-	<description>Projeto com o curso da michelli brito</description>
+	<name>javaRaven</name>
+	<description>RavenDB + Java Example</description>
 	<url/>
 	<licenses>
 		<license/>

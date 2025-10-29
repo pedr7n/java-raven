@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/products")
 public class ProductControllerRaven {
 
     @Autowired
@@ -36,16 +36,22 @@ public class ProductControllerRaven {
 
     @GetMapping("/{id}")
     public ResponseEntity<ProductDocument> findById(@PathVariable String id){
+        if (!id.startsWith("ProductDocuments/")) {
+            id = "ProductDocuments/" + id;
+        }
         var product = repository.findById(id);
-        if(product == null) return ResponseEntity.notFound().build();
+        if(product == null) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(product);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ProductDocument> updateProduct(@PathVariable String id, @RequestBody @Valid ProductRecordDto dto){
         var existing = repository.findById(id);
-        if(existing == null) return ResponseEntity.notFound().build();
-
+        if(existing == null) {
+            return ResponseEntity.notFound().build();
+        }
         existing.setName(dto.name());
         existing.setValue(dto.value());
 

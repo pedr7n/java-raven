@@ -1,4 +1,4 @@
-package com.pedro.javaWithMichelli;
+package com.pedro.javaRaven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

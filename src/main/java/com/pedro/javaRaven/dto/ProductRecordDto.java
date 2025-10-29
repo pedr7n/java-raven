@@ -1,4 +1,4 @@
-package com.pedro.javaWithMichelli.dto;
+package com.pedro.javaRaven.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

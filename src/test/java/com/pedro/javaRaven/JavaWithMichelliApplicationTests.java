@@ -1,4 +1,4 @@
-package com.pedro.javaWithMichelli;
+package com.pedro.javaRaven;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
